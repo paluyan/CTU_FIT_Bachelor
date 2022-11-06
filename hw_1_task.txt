@@ -1,0 +1,20 @@
+The task is to create a program that will compare pairs of triangles. 
+Triangles in this task can be entered using side lengths (SSS), a pair of sides and the angle enclosed by them (SUS) 
+and a pair of angles adjacent to the specified side (USU).
+
+2 triangles are specified in the plane, each triangle is uniquely specified in one of three ways:
+SSS - by the lengths of its sides,
+SUS - by the lengths of a pair of sides and the size of the angle enclosed by them (the angle is entered in degrees, the input order is side angle side),
+USU - the size of a pair of angles and the length of the adjacent side (angles are entered in degrees, the order of input is angle side angle).
+
+The program reads these numbers from its input and decides on one of the following variants:
+whether the entered inputs form a triangle,
+whether the given triangles are congruent,
+whether the given triangles are similar but not congruent, or
+whether the given triangles are completely different.
+
+If the input is invalid, the program must detect this and display an error message. Display the error message on the standard output (not on the error output).
+
+Consider it an error:
+none of the three allowed ways of entering a triangle (SSS/SUS/USU), non-numeric entry of side lengths or angle sizes are present in the input,
+side length is negative or zero, angle is less than or equal to 0 degrees, or greater than or equal to 180 degrees, missing input data/data (side/angle).
