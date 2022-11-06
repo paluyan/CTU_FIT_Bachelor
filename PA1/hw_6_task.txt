@@ -1,0 +1,24 @@
+The task is to create a program that will display help when a search term is entered.
+
+We want to implement a program that will implement part of the whispering functionality - autocomplete. 
+The program remembers a list of frequently entered phrases. For each phrase, we remember its frequency. 
+We want to implement a program that loads a list of frequently entered phrases and will then be able to search for probable phrases in this list based on the entry of their parts.
+
+The input of the program is a list of frequently entered phrases. These phrases are entered in the form:
+
+number: phrase text
+where number is the query frequency (decimal number) and phrase text is a string. 
+There is an unknown number of frequently searched phrases, their entry ends with the entry of an empty line. After entering frequently searched phrases, a self-evaluation of whispering follows. 
+The query text is entered on the input line, this text is a phrase or part of it. Query texts are entered on individual lines, their processing ends when the end of input (EOF) is reached.
+The output of the program is the number of phrases that match the entered query text. 
+The text of the query can appear anywhere in the phrase (it does not have to be at the beginning, 
+in this the entry differs from the simpler variant), we do not distinguish between lower and upper case letters. 
+The listing of the number of matching phrases is followed by their listing in order of decreasing frequency. 
+A maximum of 50 phrases with the highest frequency will be displayed. This output will be displayed for each input query text.
+
+If the input is invalid, the program must detect this and display an error message. Display the error message on the standard output (not on the error output).
+
+Consider it an error:
+frequency is not specified for the entered phrase or the frequency is not a decimal number,
+the colon separating frequency and phrase is missing,
+zero phrases were entered.
