@@ -1,0 +1,18 @@
+The task is to implement a function that will calculate the cutting of a segment with a rectangle.
+
+In computer graphics, it is necessary to calculate the clipping of graphic shapes when rendering them.
+ A typical example is rendering to a window where we want to see only the currently displayed part of the image.
+ The simplest option is cutting the line segment. The segment is specified by two points, these points may lie outside the current viewport.
+ We want to find out if the line will be drawn and if so, we want to calculate the endpoints of the drawn part of the line.
+
+Your task is to implement a function that calculates from the entered parameters of the section (rectangle) and the end points of the segment whether at least part of such a segment is visible 
+and, if so, determines the end points of the visible part of the segment. The requested function has an interface:
+
+int clipLine ( double rx1, double ry1,
+               double rx2, double ry2,
+               double * ax, double * ay,
+               double * bx, double * by );
+rx1,ry1 is the coordinate of one corner of the rectangle of the cutout, with which the segment is to be cut, rx2,ry2 is the coordinate of the second (opposite) corner of the rectangle of the cutout, 
+with which the segment is to be trimmed (the rectangle has sides parallel to the x and y axes), ax, ay are input and output parameters that specify one end point of the clipped segment. The caller fills the value with the coordinate of the end point, 
+your function adjusts the stored coordinate if it needs to cut the segment, bx, would be the input and output parameters that describe the second endpoint of the segment. The parameters otherwise behave the same as the ax and ay parameters,
+ the return value of the function returns a value of 1 if at least part of the segment extends into the clipping rectangle after clipping, a value of 0 if the entire segment is outside the clipping rectangle.
