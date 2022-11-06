@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<world>
+    <name>world</name>
+        <location>
+            <name>start</name>
+            <description>Who knows...You woke up in a wagon, don’t remember anything, you have a terrible hangover, but worst of all, you forgot where you live.
+                         This is where your journey home begins!</description>
+            <options>
+                <optionDesc>Start journey!</optionDesc>
+                <type>goto</type>
+                <target>village</target>
+            </options>
+        </location>
+
+        <location>
+            <name>village</name>
+            <description>Old ugly village. It's really hot and terrible stink here, you need to freshen up.</description>
+            <options>
+                <optionDesc>Go drink some beer in the tavern</optionDesc>
+                <type>goto</type>
+                <target>tavern</target>
+            </options>
+            <options>
+                <optionDesc>Go to the wild lake nearby. It must be cool there.</optionDesc>
+                <type>goto</type>
+                <loot>helmet</loot>
+                <target>swamp</target>
+            </options>
+        </location>
+
+
+        <location>
+            <name>tavern</name>
+            <description>Tavern. Here you see a living hell. The booze is in full swing. But what a beer!</description>
+            <options>
+                <optionDesc>Run out of the crazy tavern!</optionDesc>
+                <type>goto</type>
+                <target>swamp</target>
+            </options>
+            <options>
+                <optionDesc>A drunk man near the bar nearly shot your eye! </optionDesc>
+                <type>fight</type>
+                <target>Boozer</target>
+                <loot>gun</loot>
+                <loot>gloves</loot>
+                <winTarget>forest</winTarget>
+            </options>
+        </location>
+
+        <location>
+            <name>forest</name>
+            <description>Gloomy forest. Frightening legends go about this place. You heard the steps!</description>
+            <options>
+                <optionDesc>Hide in a cave.</optionDesc>
+                <type>goto</type>
+                <target>cave</target>
+            </options>
+            <options>
+                <optionDesc>Run to the swamp.</optionDesc>
+                <type>goto</type>
+                <target>swamp</target>
+            </options>
+        </location>
+
+        <location>
+            <name>swamp</name>
+            <description>Dirty swamp. Awful place with strange creatures. Be dangerous!</description>
+            <options>
+                <optionDesc>Oh my god! There are a lot of zombies. One of them noticed you and runs after you. </optionDesc>
+                <type>fight</type>
+                <target>Zombie</target>
+                <loot>sword</loot>
+                <loot>shield</loot>
+                <winTarget>cave</winTarget>
+            </options>
+        </location>
+
+    <location>
+        <name>cave</name>
+        <description>Dark cave. Oh! It's a werewolf place!</description>
+        <options>
+            <optionDesc>Fight werewolf!</optionDesc>
+            <type>fight</type>
+            <target>Werewolf</target>
+            <loot>gloves</loot>
+            <winTarget>finish</winTarget>
+        </options>
+        <options>
+            <optionDesc>Run out of the cave!</optionDesc>
+            <type>goto</type>
+            <target>meadow</target>
+        </options>
+    </location>
+
+    <location>
+        <name>meadow</name>
+        <description>Meadow. You tried to escape, but the werewolf caught up with you. Fight or die!</description>
+        <options>
+            <optionDesc>Fight werewolf!</optionDesc>
+            <type>fight</type>
+            <target>Werewolf</target>
+            <winTarget>finish</winTarget>
+        </options>
+    </location>
+
+    <location>
+        <name>finish</name>
+        <description>Home. You have steadily dealt with all the obstacles and came home alive. You are really cool!</description>
+    </location>
+
+        <creature>
+            <name>Zombie</name>
+            <hp>100</hp>
+            <dmg>15</dmg>
+            <def>5</def>
+        </creature>
+        <creature>
+            <name>Boozer</name>
+            <hp>50</hp>
+            <dmg>20</dmg>
+            <def>5</def>
+        </creature>
+        <creature>
+            <name>Werewolf</name>
+            <hp>80</hp>
+            <dmg>10</dmg>
+            <def>3</def>
+        </creature>
+
+        <item>
+            <type>weapon</type>
+            <name>sword</name>
+            <power>10</power>
+        </item>
+        <item>
+            <type>weapon</type>
+            <name>knife</name>
+            <power>5</power>
+        </item>
+        <item>
+            <type>weapon</type>
+            <name>gun</name>
+            <power>15</power>
+        </item>
+        <item>
+            <type>armor</type>
+            <name>shield</name>
+            <power>10</power>
+        </item>
+        <item>
+            <type>armor</type>
+            <name>helmet</name>
+            <power>15</power>
+        </item>
+        <item>
+            <type>armor</type>
+            <name>сorslet</name>
+            <power>15</power>
+        </item>
+        <item>
+            <type>armor</type>
+            <name>gloves</name>
+            <power>7</power>
+        </item>
+</world>

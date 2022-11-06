@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<saveWorld>
+ <worldName>world.xml</worldName>
+ <curLoc>start</curLoc>
+ <gamePoints>100</gamePoints>
+ <playerName>default</playerName>
+ <hp>0</hp>
+ <dmg>0</dmg>
+ <def>0</def>
+
+ <backpack>
+  <item>knife</item>
+ </backpack>
+</saveWorld>
