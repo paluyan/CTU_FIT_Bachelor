@@ -1,0 +1,26 @@
+The task is to create a program that will help operate the control tower radar.
+
+In air traffic control, it is important to watch for potential aircraft collisions.
+The radars read the positions of the planes and the program checks the distances between the planes. 
+We want to implement a program that, given the coordinates of the planes, will decide where there is a potential collision, 
+i.e. which planes are closest to each other.
+
+The program input is the coordinates of the aircraft. 
+For simplicity, we assume that the coordinates of the plane are plane, that is, the position of the plane is determined by a pair of numbers x and y. 
+The coordinates are in the form of decimal numbers. 
+The coordinate is followed by the name of the flight, which is made up of a string of any length, the name is terminated by a line break. 
+That is, information about exactly one flight is placed on each line at the input. In this way, very many flights can be entered at the input, 
+their number is not known in advance. Entering flights ends with active end-of-file (EOF on stdin).
+ The input format is obvious from the samples below.
+
+The output of the program is the distance between the pair of nearest planes. There can be multiple aircraft at this (smallest) distance at the same time. 
+The program therefore lists all pairs of flights that are separated by this smallest distance.
+
+The program must handle the input data. If the input data is incorrect, the program detects this, displays an error message, and exits.
+
+An error is considered:
+non-numeric coordinates,
+missing/remaining square brackets or comma,
+less than two flights at the entrance (otherwise the minimum distance is not defined).
+Your program will run in a limited test environment. 
+It is limited by the runtime (the limit can be seen in the log of the reference solution) and the size of the available memory is also limited.
