@@ -1,0 +1,28 @@
+The task is to implement a program that will enable the calculation of the occupation of water reservoirs.
+
+We assume that the water company manages the water tanks. Each reservoir has a cuboid shape and is connected to the other reservoirs by a water pipe.
+In total, many tanks are connected in this way, you know that there are at most 200000 of them. The connecting pipe has zero volume for calculation purposes.
+
+The program receives a network of stacks defined in this way. This is followed by entering the volume of water contained in the reservoirs.
+ The program will determine the altitude to which the water level will reach.
+
+The input of the program is the number of stacks N (an integer). Then follows a description of the individual stacks.
+The reservoir is described by a quad of integers Alt H W D, where Alt is the elevation of the bottom of the reservoir,
+H is the height of the reservoir, W is the width of the reservoir, and D is the depth of the reservoir.
+All sizes are given in meters. Such a quad is entered for each stack, so there are N quads at the input.
+After entering the stacks, a sequence of queries follows. The input contains whole numbers indicating the volume of water in the tank (in cubic meters).
+Querying ends with end-of-entry (EOF).
+
+The output of the program is the water level for each entered volume of water. If the volume is zero, the answer is "Empty",
+if the water does not fit into the reservoirs, the answer is "Overflow". The format of the answers is evident from the samples below.
+
+The program must check the correctness of the input data.
+If incorrect input is detected, the program displays an error message and exits.
+
+An error is considered:
+number of bins N non-numeric, negative, zero or greater than 200000,
+non-numeric altitude input Alt,
+non-numeric, zero, or negative H, W, or D stack dimensions,
+non-numeric or negative entry of the volume of stored water.
+
+Your program will run in a limited test environment. It is limited by the runtime (the limit can be seen in the log of the reference solution) and the size of the available memory is also limited.
