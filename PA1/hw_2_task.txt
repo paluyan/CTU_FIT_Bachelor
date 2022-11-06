@@ -1,0 +1,18 @@
+The task is to create a program that will count numbers that have a symmetrical notation in the specified number system.
+
+The input to the program is a sequence of search commands. Input is terminated when the end of input (EOF) is reached.
+Each command consists of a quad of data X R LO HI. The first character indicates whether we want to list all the found symmetric numbers (input will be the character l - list) or whether we only want to count them (input will be the character c - count). 
+The sign is followed by the basis of the number system (we want to look for symmetrical numbers in this system) and finally the lower and upper limits of the searched interval - numbers LO and HI. 
+A closed range of values ​​is searched, i.e. both LO and HI numbers are also included in the search.
+
+The output of the program is a response to each input command. The response to the l command is a list of found numbers, the format is obvious from the example.
+The answer to c is the number of numbers found.
+
+If the input is invalid, the program must detect this and display an error message. Display the error message on the standard output (not on the error output).
+
+Consider it an error:
+unknown command (neither l nor c),
+non-numeric input of system base, system base outside interval <2;36>,
+non-numeric interval entry or missing LO and HI limits,
+the lower limit is negative,
+the lower limit is greater than the upper limit.
